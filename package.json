@@ -1,0 +1,21 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "Infrastructure Configuration",
+  "scripts": {
+    "jenkins-init": "helm upgrade jenkins --values ./kubernetes/minikube/jenkins-helm.yaml stable/jenkins --install",
+    "jenkins-delete": "helm delete jenkins --purge",
+    "jenkins": "minikube service jenkins-jenkins",
+    "k8s": "minikube dashboard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JobRM/devops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JobRM/devops/issues"
+  },
+  "homepage": "https://github.com/JobRM/devops#readme"
+}
