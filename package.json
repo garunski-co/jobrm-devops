@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Infrastructure Configuration",
   "scripts": {
-    "jenkins-init": "helm upgrade jenkins --values ./kubernetes/minikube/jenkins-helm.yaml stable/jenkins --install",
+    "jenkins-init": "helm upgrade jenkins --values ./kubernetes/local/jenkins-helm.yaml stable/jenkins --install",
     "jenkins-delete": "helm delete jenkins --purge",
-    "jenkins": "minikube service jenkins-jenkins",
-    "k8s": "minikube dashboard"
+    "jenkins": "start chrome http://localhost:32222",
+    "k8s": "start chrome https://localhost:31111"
   },
   "repository": {
     "type": "git",
